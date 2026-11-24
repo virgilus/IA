@@ -1,0 +1,48 @@
+:root {
+  --chrome-color: #7a1f2b;
+  --chrome-text: #ffffff;
+}
+
+.reveal-viewport::before,
+.reveal-viewport::after {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 26px;
+  padding: 0 18px;
+  color: var(--chrome-text);
+  background: var(--chrome-color);
+  font-size: 12px;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.reveal-viewport::before {
+  top: 0;
+  content: "AI & Machine Learning";
+}
+
+.reveal-viewport::after {
+  bottom: 0;
+  content: "";
+}
+
+.reveal .slides section {
+  box-sizing: border-box;
+  padding: 38px 24px 42px;
+}
+
+html:not(.print-pdf) .reveal .slide-number {
+  position: fixed;
+  right: 18px;
+  bottom: 6px;
+  z-index: 1001;
+  display: block !important;
+  color: var(--chrome-text);
+  background: transparent;
+  font-size: 12px;
+}
